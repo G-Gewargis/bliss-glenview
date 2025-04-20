@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import PasswordGate from "./components/PasswordGate";
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="app">
+      <PasswordGate> 
       <ScrollToTop />
       <Navbar />
       <main>
@@ -32,6 +34,7 @@ function App() {
       <Footer />
       <Analytics/>
       <SpeedInsights />
+      </PasswordGate>
     </div>
   );
 }
