@@ -129,6 +129,10 @@
           margin-left: 5px;
           font-size: 0.75rem;
           transition: transform 0.3s ease;
+
+          &.active {
+            color: $pastel-hover; // Purple when active
+          }
         }
         
         .dropdown-toggle {
@@ -156,8 +160,22 @@
               color: $text;
               pointer-events: auto;
             }
+          
+            &.active:after {
+              display: none; // Remove the underline from the container
+            }
           }
           
+        // Only show underline on the services-link itself
+        .services-link.active:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $pastel-hover;
+        }
         
         .dropdown-menu {
           position: absolute;
@@ -273,19 +291,21 @@
       }
       
       li {
-        margin: 10px 0;
+        margin: 0 !important; 
+        padding: 0 !important;
         width: 100%;
         
         a, .dropdown-toggle {
           color: $text;
           display: block;
-          padding: 10px 0;
+          padding: 12px 0; // Make this consistent across all menu items
           width: 100%;
           
-          &:hover, &.active {
+          &:hover {
             color: $pastel-hover;
           }
           
+          // Remove color change for Services when dropdown is open
           &.active:after {
             display: none;
           }
@@ -293,6 +313,70 @@
         
         // Mobile dropdown styling
         &.dropdown-container {
+          margin: 0 !important; 
+          padding: 0 !important; 
+          
+          .dropdown-toggle {
+            position: relative; // Ensure proper positioning context
+            padding-top: 0px;
+            padding-bottom: 0px;
+            
+            // Don't override page-based active state
+            &.active {
+              color: $text; // Remove the !important modifier to allow page-based styles to apply
+            }
+            
+            .dropdown-flex {
+              padding: 0 !important;
+              margin: 0 !important;
+              
+              .services-link {
+                flex: 1;
+                padding: 12px 0;
+                display: block;
+                color: $text;
+                
+                &:hover {
+                  color: $pastel-hover;
+                }
+                
+                // Add this to ensure Services stays purple on its page
+                &.active {
+                  color: $pastel-hover !important;
+                }
+              }
+              
+              .dropdown-icon {
+                position: absolute;
+                right: 0;
+                top: 50%; // Center vertically
+                transform: translateY(-50%); // Center vertically
+                background-color: rgba(0, 0, 0, 0.05); // Light background for contrast
+                padding: 10px;
+                border-radius: 50%; // Circular background
+                width: 40px; // Fixed width
+                height: 40px; // Fixed height
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                color: $text; // Default black color
+                z-index: 10;
+                margin-right: 5px; // Small margin from edge
+                
+                // Make caret purple only when dropdown is open
+                .dropdown-menu.show + & {
+                  color: $pastel-hover;
+                }
+                
+                // Make it change color based on dropdown state
+                &.active {
+                  color: $pastel-hover !important; // Use !important to override
+                }
+              }
+            }
+          }
+          
           .dropdown-menu {
             position: static;
             opacity: 1;
@@ -305,11 +389,12 @@
             overflow: hidden;
             transition: max-height 0.3s ease;
             padding: 0;
-            margin-top: 0px;
+            margin-top: 0; 
             
             &.show {
               max-height: 500px;
               padding: 10px 0;
+              margin-bottom: 10px; // Add space after dropdown menu
             }
             
             li {
@@ -326,8 +411,13 @@
           }
         }
         
+        // Ensure consistent spacing between menu items
+        & + li {
+          margin-top: 5px !important; // Add consistent spacing between all menu items
+        }
+        
         &.btn-container {
-          margin: 20px 0 0;
+          margin-top: 15px !important; 
           
           .btn {
             width: 100%;

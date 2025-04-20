@@ -10,7 +10,16 @@ const Navbar = () => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const location = useLocation();
   const servicesDropdownRef = useRef(null);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 992);
+    checkMobile(); // Initial check
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Handle scrolling
   useEffect(() => {
     const handleScroll = () => {
@@ -72,32 +81,34 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="dropdown-container" ref={servicesDropdownRef}>
-            <div 
+          <li
+            className="dropdown-container"
+            ref={servicesDropdownRef}
+            onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
+            onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
+          >
+            <div
               className={`dropdown-toggle ${location.pathname === '/services' ? 'active' : ''}`}
-              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              onClick={() => isMobile && setServicesDropdownOpen(!servicesDropdownOpen)}
             >
-            <div className="dropdown-flex">
-              <Link to="/services" className="services-link">Services</Link>
-              <FaChevronDown className="dropdown-icon" />
+              <div className="dropdown-flex">
+                <Link to="/services" className={`services-link ${location.pathname === '/services' ? 'active' : ''}`}>
+                  Services
+                </Link>
+                <FaChevronDown 
+                  className={`dropdown-icon ${servicesDropdownOpen ? 'active' : ''}`} 
+                />
+              </div>
             </div>
-          </div>
 
             <ul className={`dropdown-menu ${servicesDropdownOpen ? 'show' : ''}`}>
-              <li>
-                <Link to="/services#hair">Hair Services</Link>
-              </li>
-              <li>
-                <Link to="/services#color">Color Services</Link>
-              </li>
-              <li>
-                <Link to="/services#nails">Nail Services</Link>
-              </li>
-              <li>
-                <Link to="/services#waxing">Waxing Services</Link>
-              </li>
+              <li><Link to="/services#hair">Hair Services</Link></li>
+              <li><Link to="/services#color">Color Services</Link></li>
+              <li><Link to="/services#nails">Nail Services</Link></li>
+              <li><Link to="/services#waxing">Waxing Services</Link></li>
             </ul>
           </li>
+
           <li>
             <Link 
               to="/about" 
