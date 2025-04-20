@@ -1,12 +1,43 @@
-# React + Vite
+# Bliss Glenview - Professional Salon Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for **Bliss Glenview**, a professional website designed for a local salon. This project was fully created by an aspiring web developer and software engineer to showcase skills in modern web development and design.
 
-Currently, two official plugins are available:
+## 🌟 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bliss Glenview's website serves as a professional platform to represent the salon's services, provide an engaging user experience, and highlight the brand's aesthetic. The website is fully responsive, ensuring it looks and works great on all devices, from desktops to smartphones.
 
-## Expanding the ESLint configuration
+## 💻 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project leverages the following languages and technologies:
+
+- **React** – A JavaScript library for building user interfaces, enabling the creation of modular and reusable UI components.
+- **Vite** – A fast and modern frontend build tool that enables lightning-fast development and optimized production builds for React projects.
+- **JavaScript (57%)** – Used to add interactivity and dynamic features to the website, ensuring a smooth and engaging user experience.
+- **SCSS (41.8%)** – Employed for styling the website with modular, maintainable, and reusable CSS code.
+- **HTML** – Forms the backbone of the website's structure and content.
+
+## ✨ Features
+
+- **Responsive Design** – The website adapts seamlessly to various screen sizes and devices.
+- **Clean and Modern UI** – Designed with attention to detail to reflect the professional and welcoming nature of the salon.
+- **Interactive Elements** – JavaScript and React are used to enhance user interactivity and ensure a smooth browsing experience.
+- **Performance Optimized** – Built with Vite for fast development, hot module reloading, and quick production builds.
+- **Custom Styling** – SCSS makes the styling process efficient and consistent across the website.
+
+## Live Demo
+[https://bliss-glenview.vercel.app/](https://bliss-glenview.vercel.app/)
+
+## 📂 Project Structure
+
+- `src/components/` – Reusable React components used throughout the website.
+- `src/styles/` – SCSS files for custom styling.
+- `public/` – Static assets such as images and fonts.
+- `index.html` – Main HTML entry point.
+- `vite.config.js` – Vite configuration file.
+
+## 📧 Contact
+
+If you have any questions or want to connect, feel free to reach out:
+
+- GitHub: [G-Gewargis](https://github.com/G-Gewargis)
+- Email: g.georges@wustl.edu
