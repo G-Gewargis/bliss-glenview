@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaYelp, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.scss';
-
+import logoImage from '../assets/images/glenview.png';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-column">
-            <h3>Bliss Salon of Glenview</h3>
+            <img src={logoImage} alt="Bliss Salon of Glenview" className="footer-logo" />
             <p>A luxury salon providing exceptional services in hair styling, color, nails, and more for over 40 years.</p>
             <div className="social-links">
               <a href="https://www.facebook.com/BlissWinnetka/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>

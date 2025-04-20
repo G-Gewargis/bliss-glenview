@@ -11,6 +11,13 @@
     margin-bottom: 60px;
   }
   
+  &-logo {
+    max-width: 180px; 
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
   &-column {
     flex: 1;
     min-width: 200px;
@@ -129,6 +136,11 @@
       flex-direction: column;
     }
     
+    .footer-logo {
+        max-width: 150px; 
+        margin: 0 auto 1rem;
+      }
+
     &-column {
       width: 100%;
       margin-bottom: 40px;

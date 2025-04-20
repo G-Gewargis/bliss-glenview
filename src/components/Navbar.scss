@@ -20,6 +20,10 @@
   
   &.scrolled {
     padding: 10px 0;
+
+    .navbar-logo .logo-image {
+      height: 50px; // Slightly smaller logo when scrolled
+    }
   }
   
   .navbar-container {
@@ -29,9 +33,7 @@
   }
   
   .navbar-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
     text-decoration: none;
     
     span {
@@ -47,6 +49,12 @@
         color: $pastel;
         margin-top: -5px;
       }
+    }
+
+    .logo-image {
+      height: 80px; // Adjust height as needed
+      width: auto;
+      transition: height 0.3s ease;
     }
   }
   

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import './Navbar.scss';
+import logoImage from '../assets/images/glenview.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,8 +52,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          <span>Bliss</span>
-          <span className="salon-name">SALON OF GLENVIEW</span>
+          <img src={logoImage} alt="Bliss Salon of Glenview" className="logo-image" />
         </Link>
         
         <button 
