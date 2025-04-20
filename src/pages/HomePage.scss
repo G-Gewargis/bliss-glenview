@@ -1,0 +1,272 @@
+@import '../styles/main.scss';
+
+.home-page {
+  .hero {
+    height: 90vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    
+    // Lightened hero background with pastel overlay for a softer look
+    background: linear-gradient(rgba(132, 107, 152, 0.6), rgba(82, 67, 95, 0.7)), url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    text-align: center;
+    
+    &-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 30px;
+      
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        color: $white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+      
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        color: $white;
+        font-weight: 300;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        
+        @media (max-width: 576px) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+  
+  // Welcome section
+  .welcome {
+    background-color: $white;
+    padding: 5rem 0;
+    
+    .section-title {
+      margin-bottom: 3rem;
+    }
+    
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
+    }
+    
+    &-text {
+      flex: 1;
+      
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: $text;
+      }
+      
+      .btn {
+        margin-top: 1rem;
+      }
+    }
+    
+    &-image {
+      flex: 1;
+      
+      .image-container {
+        position: relative;
+        padding-bottom: 75%;
+        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        
+        .placeholder-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('../assets/images/salon-interior.jpg');
+          background-size: cover;
+          background-position: center;
+          transition: transform 0.5s ease;
+          
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+  
+  // Services section
+  .services-overview {
+    background-color: $light-bg;
+    padding: 5rem 0;
+    
+    .section-title {
+      margin-bottom: 3rem;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      
+      .service-card {
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 4px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+          
+          .service-icon {
+            background-color: $accent;
+            color: $white;
+          }
+        }
+        
+        .service-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 70px;
+          height: 70px;
+          margin: 0 auto 1.5rem;
+          background-color: rgba($accent, 0.1);
+          color: $accent;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          transition: all 0.3s ease;
+        }
+        
+        h3 {
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+          color: $heading;
+        }
+        
+        p {
+          margin-bottom: 1.5rem;
+          color: $text;
+          line-height: 1.6;
+          font-size: 0.95rem;
+        }
+        
+        a {
+          font-weight: 500;
+          color: $accent;
+          position: relative;
+          display: inline-block;
+          
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $accent;
+            transition: width 0.3s ease;
+          }
+          
+          &:hover {
+            color: $accent;
+            
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // CTA section
+  .cta-section {
+    background: linear-gradient(rgba(132, 107, 152, 0.6), rgba(82, 67, 95, 0.7)), url('../assets/images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    text-align: center;
+    padding: 5rem 0;
+    
+    .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+      
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: $white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
+      }
+      
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: $white;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      
+      .btn {
+        min-width: 180px;
+      }
+    }
+  }
+}
+
+// Animations - simplified for better performance
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// New accent line style
+.accent-line {
+  width: 50px;
+  height: 3px;
+  background: $accent;
+  margin: 1rem auto 1.5rem;
+}

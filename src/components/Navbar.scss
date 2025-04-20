@@ -1,0 +1,288 @@
+@import '../styles/main.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: $white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+
+  .navbar-logo span, 
+  .navbar-menu li a, 
+  .navbar-menu li .dropdown-toggle,
+  .navbar-toggle {
+    text-shadow: none;
+  }
+  
+  &.scrolled {
+    padding: 10px 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    
+    span {
+      color: $heading;
+      font-size: 1.8rem;
+      font-weight: 700;
+      transition: color 0.3s ease;
+      
+      &.salon-name {
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+        font-weight: 400;
+        color: $pastel;
+        margin-top: -5px;
+      }
+    }
+  }
+  
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $heading;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    
+    li {
+      margin: 0 15px;
+      position: relative;
+      
+      a, .dropdown-toggle {
+        color: $text;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        
+        &:hover, &.active {
+          color: $pastel-hover;
+        }
+        
+        &.active:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $pastel-hover;
+        }
+        
+        .services-link {
+          color: inherit;
+          text-decoration: none;
+          padding-right: 5px;
+        }
+      }
+      
+      // Dropdown styling
+      &.dropdown-container {
+        position: relative;
+        
+        .dropdown-icon {
+          margin-left: 5px;
+          font-size: 0.75rem;
+          transition: transform 0.3s ease;
+        }
+        
+        .dropdown-toggle {
+          &:hover + .dropdown-menu,
+          &:focus + .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+        
+        .dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: -20px;
+          background-color: $white;
+          border-radius: 4px;
+          padding: 10px 0;
+          min-width: 180px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
+          transition: all 0.3s ease;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          z-index: 100;
+          
+          &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+          
+          li {
+            margin: 0;
+            display: block;
+            
+            a {
+              color: $text;
+              padding: 8px 20px;
+              display: block;
+              font-weight: 400;
+              
+              &:hover {
+                background-color: $pastel-light;
+                color: $pastel-hover;
+              }
+              
+              &.active:after {
+                display: none;
+              }
+            }
+          }
+          
+          &:hover {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+      
+      &.btn-container {
+        margin-left: 15px;
+        
+        .btn {
+          padding: 8px 20px;
+          border-radius: 30px;
+          font-size: 0.9rem;
+          
+          &.btn-filled {
+            background-color: $accent;
+            color: $white;
+            
+            &:hover {
+              background-color: $accent-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-toggle {
+      display: block;
+    }
+    
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 400px;
+      height: 100vh;
+      background-color: $white;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 80px 20px 40px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      
+      &.active {
+        right: 0;
+      }
+      
+      li {
+        margin: 10px 0;
+        width: 100%;
+        
+        a, .dropdown-toggle {
+          color: $text;
+          display: block;
+          padding: 10px 0;
+          width: 100%;
+          
+          &:hover, &.active {
+            color: $pastel-hover;
+          }
+          
+          &.active:after {
+            display: none;
+          }
+        }
+        
+        // Mobile dropdown styling
+        &.dropdown-container {
+          .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            box-shadow: none;
+            background-color: $light-bg;
+            border-radius: 4px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0;
+            margin-top: 5px;
+            
+            &.show {
+              max-height: 500px;
+              padding: 10px 0;
+            }
+            
+            li {
+              margin: 0;
+              
+              a {
+                padding: 8px 20px;
+                
+                &:hover {
+                  background-color: rgba($pastel, 0.1);
+                }
+              }
+            }
+          }
+        }
+        
+        &.btn-container {
+          margin: 20px 0 0;
+          
+          .btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

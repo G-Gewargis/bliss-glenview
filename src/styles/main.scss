@@ -1,0 +1,263 @@
+// Main styling for Bliss Salon of Glenview
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+// Modern color variables with better contrast
+$white: #ffffff;
+$black: #111111; 
+$heading: #212121; // Near black for headers
+$text: #333333; // Dark charcoal for text
+$light-bg: #f9f9f9; // Light background for sections
+$accent: #c9a84a; // Updated gold accent - slightly deeper for better contrast
+$accent-light: rgba($accent, 0.1);
+$accent-hover: darken($accent, 10%);
+
+// Secondary accent color - updated to a richer blush pink
+$accent2: #e6b8b0; // Rich blush pink
+
+// New pastel color for softer accents
+$pastel: #b9a1c9; // Richer dusty lavender
+$pastel-light: rgba($pastel, 0.15);
+$pastel-hover: darken($pastel, 10%);
+
+// Font variables - using modern sans-serif fonts
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-secondary;
+  background-color: $white;
+  color: $text;
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-primary;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $heading;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+a {
+  color: $heading;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $accent;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Modern button styles
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: $font-primary;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  
+  &.btn-filled {
+    background: $accent;
+    color: $white;
+    border: 1px solid $accent;
+    
+    &:hover {
+      background: $accent-hover;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba($accent, 0.3);
+    }
+  }
+  
+  &.btn-outline {
+    background: transparent;
+    color: $accent;
+    border: 1px solid $accent;
+    
+    &:hover {
+      background: $accent;
+      color: $white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba($accent, 0.2);
+    }
+  }
+}
+
+// Common design elements
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background-color: $accent;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+// Section styling
+.section {
+  padding: 5rem 0;
+  
+  &-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      position: relative;
+      display: inline-block;
+    }
+    
+    p {
+      max-width: 700px;
+      margin: 1rem auto 0;
+      color: $text;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Page header styling - with better contrast
+.page-header {
+  padding: 8rem 0 4rem;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/services-header.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: $white;
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: $white;
+  }
+  
+  p {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    font-size: 1.1rem;
+    color: rgba($white, 0.9);
+  }
+}
+
+// Enhanced animations - optimized for performance
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive styles
+@media (max-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .page-header {
+    padding: 7rem 0 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  .btn {
+    padding: 10px 24px;
+  }
+}
+
+// Common utility classes
+.text-center {
+  text-align: center;
+}
+
+.accent-color {
+  color: $accent;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
