@@ -2,11 +2,14 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCut, FaPaintBrush, FaHandSparkles, FaSprayCan, FaSpa, FaGem, FaPalette } from 'react-icons/fa';
+import HeroCarousel from '../components/HeroCarousel';
 import './HomePage.scss';
 
 const HomePage = () => {
   const servicesRef = useRef(null);
   
+  
+
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll('.fade-in');
@@ -32,6 +35,9 @@ const HomePage = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero">
+        <div className="hero-carousel-container">
+          <HeroCarousel />
+        </div>
         {/* Decorative elements */}
         <div className="hero-decor hero-decor-1"></div>
         <div className="hero-decor hero-decor-2"></div>

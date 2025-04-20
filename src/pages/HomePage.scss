@@ -2,40 +2,106 @@
 
 .home-page {
   .hero {
-    height: 90vh;
-    min-height: 500px;
+    height: 100vh; // Increase from 90vh to 100vh
+    min-height: 100vh; // Make sure it's at least full viewport height
+    margin-bottom: -1px; // Eliminate any potential gap
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 0;
-    overflow: hidden;
-    
-    // Lightened hero background with pastel overlay for a softer look
-    background: linear-gradient(rgba(132, 107, 152, 0.6), rgba(82, 67, 95, 0.7)), url('../assets/images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: $white;
-    text-align: center;
-    
+
+    // Remove the gradient overlay completely by commenting it out or deleting it
+    /*
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(132, 107, 152, 0.7), rgba(82, 67, 95, 0.8));
+      z-index: 1;
+      pointer-events: none;
+    }
+    */
+
+    &-carousel-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      .hero-swiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-pagination {
+          position: relative; // Change from absolute to relative
+          bottom: 30px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          gap: 12px; // Space between bullets
+          z-index: 10 !important; // Use important to override Swiper's default z-index
+
+          .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative; // Ensure it has its own stacking context
+            z-index: 10 !important; // Make extra sure it's on top
+
+            &-active {
+              background-color: white;
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // Add text shadow to maintain readability without the overlay
     &-content {
       position: relative;
       z-index: 2;
+      text-align: center;
       max-width: 800px;
-      padding: 0 30px;
-      
+      padding: 0 20px;
+      color: white;
+      pointer-events: auto;
+      margin-bottom: 60px;
+
+      // Add a semi-transparent background just for the text container
+      background-color: rgba(0, 0, 0, 0.4); // Black overlay just for text
+      padding: 30px;
+      border-radius: 8px;
+      backdrop-filter: blur(3px); // Subtle blur effect (works in modern browsers)
+
       h1 {
         font-size: 3.5rem;
         margin-bottom: 1.5rem;
         font-weight: 600;
         color: $white;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); // Stronger text shadow
+
         @media (max-width: 768px) {
           font-size: 2.5rem;
         }
       }
-      
+
       p {
         font-size: 1.2rem;
         margin-bottom: 2.5rem;
@@ -45,51 +111,56 @@
         margin-left: auto;
         margin-right: auto;
         line-height: 1.6;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); // Stronger text shadow
       }
-      
+
       .btn-container {
         display: flex;
         justify-content: center;
         gap: 15px;
-        
+
         @media (max-width: 576px) {
           flex-direction: column;
           align-items: center;
         }
       }
     }
+
+    // Keep your existing decorative elements with proper z-index
+    &-decor {
+      z-index: 1;
+    }
   }
-  
+
   // Welcome section
   .welcome {
     background-color: $white;
     padding: 5rem 0;
-    
+
     .section-title {
       margin-bottom: 3rem;
     }
-    
+
     &-content {
       display: flex;
       align-items: center;
       gap: 50px;
-      
+
       @media (max-width: 992px) {
         flex-direction: column;
       }
     }
-    
+
     &-text {
       flex: 1;
-      
+
       p {
         margin-bottom: 1.5rem;
         font-size: 1rem;
         line-height: 1.8;
         color: $text;
       }
-      
+
       .btn {
         margin-top: 1rem;
       }
@@ -101,25 +172,24 @@
         border-radius: 4px;
         font-weight: 500;
         transition: all 0.3s ease;
-      
+
         &:hover {
           background-color: $accent;
           color: $white;
         }
       }
-      
     }
-    
+
     &-image {
       flex: 1;
-      
+
       .image-container {
         position: relative;
         padding-bottom: 75%;
         overflow: hidden;
         border-radius: 4px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        
+
         .placeholder-image {
           position: absolute;
           top: 0;
@@ -130,7 +200,7 @@
           background-size: cover;
           background-position: center;
           transition: transform 0.5s ease;
-          
+
           &:hover {
             transform: scale(1.05);
           }
@@ -138,21 +208,21 @@
       }
     }
   }
-  
+
   // Services section
   .services-overview {
     background-color: $light-bg;
     padding: 5rem 0;
-    
+
     .section-title {
       margin-bottom: 3rem;
     }
-    
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 25px;
-      
+
       .service-card {
         background-color: $white;
         padding: 2rem;
@@ -160,17 +230,17 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        
+
         &:hover {
           transform: translateY(-10px);
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-          
+
           .service-icon {
             background-color: $accent;
             color: $white;
           }
         }
-        
+
         .service-icon {
           display: flex;
           align-items: center;
@@ -184,26 +254,26 @@
           font-size: 1.5rem;
           transition: all 0.3s ease;
         }
-        
+
         h3 {
           margin-bottom: 1rem;
           font-size: 1.4rem;
           color: $heading;
         }
-        
+
         p {
           margin-bottom: 1.5rem;
           color: $text;
           line-height: 1.6;
           font-size: 0.95rem;
         }
-        
+
         a {
           font-weight: 500;
           color: $accent;
           position: relative;
           display: inline-block;
-          
+
           &:after {
             content: '';
             position: absolute;
@@ -214,10 +284,10 @@
             background-color: $accent;
             transition: width 0.3s ease;
           }
-          
+
           &:hover {
             color: $accent;
-            
+
             &:after {
               width: 100%;
             }
@@ -226,7 +296,7 @@
       }
     }
   }
-  
+
   // CTA section
   .cta-section {
     background: linear-gradient(rgba(132, 107, 152, 0.6), rgba(82, 67, 95, 0.7)), url('../assets/images/cta-bg.jpg');
@@ -235,29 +305,29 @@
     color: $white;
     text-align: center;
     padding: 5rem 0;
-    
+
     .cta-content {
       max-width: 700px;
       margin: 0 auto;
-      
+
       h2 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
         color: $white;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        
+
         @media (max-width: 768px) {
           font-size: 2rem;
         }
       }
-      
+
       p {
         font-size: 1.1rem;
         margin-bottom: 2rem;
         color: $white;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
       }
-      
+
       .btn {
         min-width: 180px;
       }
@@ -271,7 +341,7 @@
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   will-change: opacity, transform;
-  
+
   &.visible {
     opacity: 1;
     transform: translateY(0);

@@ -52,7 +52,7 @@
     }
 
     .logo-image {
-      height: 80px; // Adjust height as needed
+      height: 80px; 
       width: auto;
       transition: height 0.3s ease;
     }
@@ -323,7 +323,7 @@
             
             // Don't override page-based active state
             &.active {
-              color: $text; // Remove the !important modifier to allow page-based styles to apply
+              color: $text; 
             }
             
             .dropdown-flex {
@@ -340,7 +340,6 @@
                   color: $pastel-hover;
                 }
                 
-                // Add this to ensure Services stays purple on its page
                 &.active {
                   color: $pastel-hover !important;
                 }
