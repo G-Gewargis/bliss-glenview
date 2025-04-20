@@ -77,8 +77,12 @@ const Navbar = () => {
               className={`dropdown-toggle ${location.pathname === '/services' ? 'active' : ''}`}
               onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
             >
-              <Link to="/services" className="services-link">Services</Link> <FaChevronDown className="dropdown-icon" />
+            <div className="dropdown-flex">
+              <Link to="/services" className="services-link">Services</Link>
+              <FaChevronDown className="dropdown-icon" />
             </div>
+          </div>
+
             <ul className={`dropdown-menu ${servicesDropdownOpen ? 'show' : ''}`}>
               <li>
                 <Link to="/services#hair">Hair Services</Link>

@@ -76,7 +76,8 @@ const HomePage = () => {
             <div className="welcome-text fade-in">
               <p>At Bliss Salon of Glenview, we believe that every client deserves a personalized beauty experience that leaves them feeling refreshed, confident, and beautiful.</p>
               <p>Our skilled team of professionals is dedicated to providing exceptional services in a relaxing, upscale environment where your satisfaction is our highest priority.</p>
-              <Link to="/about" className="btn">About Us</Link>
+              <Link to="/about" className="btn-outline">About Us</Link>
+
             </div>
             <div className="welcome-image fade-in">
               <div className="image-container">
