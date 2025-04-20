@@ -1,19 +1,19 @@
 @import '../styles/main.scss';
 
 .services-page {
-  padding-top: 80px;
+  padding-top: 35px;
   
   .page-header {
     text-align: center;
+    height: 400px;
     padding: 120px 0 80px;
-    background: linear-gradient(rgba(132, 107, 152, 0.6), rgba(82, 67, 95, 0.7)), url('../assets/images/services-header.jpg');
     background-size: cover;
     background-position: center;
     color: $white;
     margin-bottom: 0;
     
     h1 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.7rem;
       color: $white;
     }
     
@@ -141,7 +141,7 @@
         min-width: 300px;
         
         .placeholder-image {
-          height: 400px;
+          height: 500px;
           border-radius: 4px;
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -155,6 +155,7 @@
           
           &.hair-image {
             background-image: url('../assets/images/hair-service.jpg');
+            background-position: center top;
           }
           
           &.color-image {
@@ -167,6 +168,26 @@
           
           &.waxing-image {
             background-image: url('../assets/images/waxing-service.jpg');
+          }
+
+          &.facials-image {
+            background-image: url('../assets/images/facials-service.jpg');
+            background-position: center 30%; // Adjust to show face properly
+          }
+
+          &.eyelashes-image {
+            background-image: url('../assets/images/eyelashes-service.jpg');
+            background-position: center 25%; // Focus on eye area
+          }
+
+          &.makeup-image {
+            background-image: url('../assets/images/makeup-service.jpg');
+            background-position: center 20%; // Show full face makeup
+          }
+
+          &.packages-image {
+            background-image: url('../assets/images/packages-service.jpg');
+            background-position: center 15%; // Adjust to show face properly
           }
         }
       }

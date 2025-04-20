@@ -95,6 +95,7 @@ const ServicesPage = () => {
               <li><a href="#facials">Facials</a></li>
               <li><a href="#eyelashes">Eyelashes</a></li>
               <li><a href="#makeup">Makeup</a></li>
+              <li><a href="#packages">Packages</a></li>
             </ul>
           </div>
         </div>
@@ -323,6 +324,180 @@ const ServicesPage = () => {
               
               <div className="service-image fade-in">
                 <div className="placeholder-image waxing-image"></div>
+              </div>
+            </div>
+          </section>
+
+          {/* Facials Services */}
+          <section id="facials" className="service-section">
+            <div className="service-header fade-in">
+              <h2>Facial Services</h2>
+              <div className="accent-line"></div>
+              <p>Revitalize and nourish your skin with our custom facial treatments</p>
+            </div>
+            
+            <div className="service-content">
+              <div className="service-image fade-in">
+                <div className="placeholder-image facials-image"></div>
+              </div>
+              
+              <div className="service-details fade-in">
+                <div className="service-item">
+                  <div className="service-name">Bliss Facial</div>
+                  <div className="service-price">$85</div>
+                  <div className="service-description">Our signature facial customized for your skin type, includes cleansing, exfoliation, mask, and relaxing massage.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Teen Facial</div>
+                  <div className="service-price">$65</div>
+                  <div className="service-description">Specially formulated for younger skin to address acne concerns and establish proper skincare habits.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Anti-Aging Facial</div>
+                  <div className="service-price">$110</div>
+                  <div className="service-description">Advanced treatment with premium products to target fine lines, wrinkles, and loss of elasticity.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Eyelashes Services */}
+          <section id="eyelashes" className="service-section">
+            <div className="service-header fade-in">
+              <h2>Eyelash Services</h2>
+              <div className="accent-line"></div>
+              <p>Enhance your natural beauty with our expert lash extensions and treatments</p>
+            </div>
+            
+            <div className="service-content reverse">
+              <div className="service-details fade-in">
+                <div className="service-item">
+                  <div className="service-name">Eyelash Extensions</div>
+                  <div className="service-price">$150+</div>
+                  <div className="service-description">Full set of premium quality lash extensions individually applied for a natural yet dramatic look.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Eyelash Fill In</div>
+                  <div className="service-price">$70+</div>
+                  <div className="service-description">Maintenance service recommended every 2-3 weeks to fill in grown-out lashes.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Eyelash Curl</div>
+                  <div className="service-price">$65</div>
+                  <div className="service-description">Semi-permanent curl that lifts and enhances your natural lashes for up to 8 weeks.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Eyelash Tinting</div>
+                  <div className="service-price">$35</div>
+                  <div className="service-description">Semi-permanent color enhancement for your natural lashes, perfect for those with light colored lashes.</div>
+                </div>
+              </div>
+              
+              <div className="service-image fade-in">
+                <div className="placeholder-image eyelashes-image"></div>
+              </div>
+            </div>
+          </section>
+
+          {/* Makeup Services */}
+          <section id="makeup" className="service-section">
+            <div className="service-header fade-in">
+              <h2>Makeup Services</h2>
+              <div className="accent-line"></div>
+              <p>Professional makeup application for special events or everyday glamour</p>
+            </div>
+            
+            <div className="service-content">
+              <div className="service-image fade-in">
+                <div className="placeholder-image makeup-image"></div>
+              </div>
+              
+              <div className="service-details fade-in">
+                <div className="service-item">
+                  <div className="service-name">Full Face Makeup</div>
+                  <div className="service-price">$85</div>
+                  <div className="service-description">Complete makeup application including foundation, eyes, lips, and contouring using premium products.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Eyes Only Makeup</div>
+                  <div className="service-price">$45</div>
+                  <div className="service-description">Focused application on eyes including eyeshadow, liner, and mascara for a dramatic look.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Bridal Makeup</div>
+                  <div className="service-price">$150+</div>
+                  <div className="service-description">Long-lasting, photo-ready makeup application for your special day, includes consultation and premium products.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Prom Makeup</div>
+                  <div className="service-price">$95</div>
+                  <div className="service-description">Age-appropriate glamour for prom, homecoming, and other special events.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Packages Services */}
+          <section id="packages" className="service-section">
+            <div className="service-header fade-in">
+              <h2>Packages</h2>
+              <div className="accent-line"></div>
+              <p>Enjoy our specially curated service combinations for a complete beauty experience</p>
+            </div>
+            
+            <div className="service-content reverse">
+              <div className="service-details fade-in">
+                <div className="service-item">
+                  <div className="service-name">Bliss Full Day of Beauty</div>
+                  <div className="service-price">$260</div>
+                  <div className="service-description">Haircut & Style, Eyebrow & Lip Wax/Threading, Paraffin Treatment on Hands & Feet, No-Chip Manicure, Pedicure & Make-Up Application.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Bliss Half Day of Beauty</div>
+                  <div className="service-price">$164</div>
+                  <div className="service-description">Haircut & Style, No-Chip Manicure & Pedicure, Paraffin Treatment on Hands & Feet.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Nails & Toes</div>
+                  <div className="service-price">$100</div>
+                  <div className="service-description">No-Chip Manicure, Pedicure, Paraffin Treatment on Hands & Feet.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Beautiful Face</div>
+                  <div className="service-price">$110</div>
+                  <div className="service-description">One Hour Bliss Facial, Eyebrow & Lip Waxing or Threading.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">Makeup & More</div>
+                  <div className="service-price">$232</div>
+                  <div className="service-description">Full Face Makeup Application & Eyelash Extensions.</div>
+                </div>
+                
+                <div className="service-item">
+                  <div className="service-name">King's Day</div>
+                  <div className="service-price">$97</div>
+                  <div className="service-description">Men's Haircut & Style, "Man"-icure, Pedicure.</div>
+                </div>
+                
+                <div className="service-note">
+                  <p>* All services are discounted 5% off in the packages. No substitutions and packages may not be shared.</p>
+                </div>
+              </div>
+              
+              <div className="service-image fade-in">
+                <div className="placeholder-image packages-image"></div>
               </div>
             </div>
           </section>
