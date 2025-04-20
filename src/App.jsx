@@ -8,6 +8,8 @@ import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ScrollToTop from './components/ScrollToTop';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   // This will handle the scroll restoration when navigating to new pages
@@ -28,6 +30,8 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <Analytics/>
+      <SpeedInsights />
     </div>
   );
 }
