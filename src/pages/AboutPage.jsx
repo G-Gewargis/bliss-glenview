@@ -1,43 +1,40 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import './AboutPage.scss';
 
 const AboutPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  
+
   useEffect(() => {
-    // Performance optimization: use IntersectionObserver instead of scroll event
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Once the element is visible, stop observing it
-          observer.unobserve(entry.target);
+    const handleScroll = () => {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+          element.classList.add('visible');
         }
       });
-    }, {
-      rootMargin: '0px 0px -100px 0px',
-      threshold: 0.1
-    });
-    
-    // Observe all fade-in elements
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach(element => {
-      observer.observe(element);
-    });
-    
-    setIsLoaded(true);
-    
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check on initial load
+
     return () => {
-      // Clean up observer on component unmount
-      fadeElements.forEach(element => {
-        observer.unobserve(element);
-      });
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <div className="about-page">
+      <SEO 
+        title="About Us"
+        description="Meet the talented team behind Bliss Salon of Glenview. Learn about our history, philosophy, and commitment to providing exceptional beauty services in a luxurious environment."
+        keywords="salon team, hair stylists, beauty professionals, Glenview salon history, beauty experts, luxury salon experience"
+        image="/images/og-image.jpg"
+        canonical="https://blissglenview.com/about"
+      />
+
       {/* Page Header */}
       <header className="page-header">
         <div className="container">

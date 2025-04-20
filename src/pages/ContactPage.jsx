@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './ContactPage.scss';
 
 const ContactPage = () => {
@@ -71,6 +72,14 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Bliss Salon of Glenview. Located at 1875 Waukegan Road, Glenview, IL. Book appointments, ask questions, or provide feedback via phone (773) 550-3730 or email."
+        keywords="contact salon, Glenview salon, book appointment, salon location, hair salon contact, beauty salon contact"
+        image="/images/og-image.jpg"
+        canonical="https://blissglenview.com/contact"
+      />
+      
       {/* Page Header */}
       <header className="page-header">
         <div className="container">
