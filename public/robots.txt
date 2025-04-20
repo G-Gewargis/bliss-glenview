@@ -1,0 +1,10 @@
+# www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://blissglenview.com/sitemap.xml
+
+# Host
+Host: blissglenview.com
