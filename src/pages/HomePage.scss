@@ -11,21 +11,6 @@
     align-items: center;
     justify-content: center;
 
-    // Remove the gradient overlay completely by commenting it out or deleting it
-    /*
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(132, 107, 152, 0.7), rgba(82, 67, 95, 0.8));
-      z-index: 1;
-      pointer-events: none;
-    }
-    */
-
     &-carousel-container {
       position: absolute;
       top: 0;
