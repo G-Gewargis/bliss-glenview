@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import './ServicesPage.scss';
+import servicesHeaderImage from '../assets/images/services-header.jpg'; // Import the image
 
 const ServicesPage = () => {
   const location = useLocation();
@@ -65,7 +66,11 @@ const ServicesPage = () => {
       
       <div className="services-page" ref={servicesRef}>
         {/* Page Header */}
-        <header className="page-header">
+        <header className="page-header" style={{ 
+          backgroundImage: `url(${servicesHeaderImage})`, // Use the imported image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 30%'
+        }}>
           <div className="container">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

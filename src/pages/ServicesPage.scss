@@ -4,17 +4,63 @@
   padding-top: 35px;
   
   .page-header {
+    position: relative;
     text-align: center;
     height: 400px;
     padding: 120px 0 80px;
     background-size: cover;
-    background-position: center;
+    background-position: center 30%; // Better position to focus on subject
     color: $white;
     margin-bottom: 0;
+    
+    // Add overlay to darken the image
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); // Adjust opacity as needed (0.4 = 40% black overlay)
+      z-index: 1;
+    }
+    
+    // Make responsive for different screen sizes
+    @media (max-width: 992px) {
+      height: 350px;
+      padding: 100px 0 60px;
+      background-position: 25% 25%; // Changed from 40% to show more of the left side
+    }
+    
+    @media (max-width: 768px) {
+      height: 300px;
+      padding: 80px 0 50px;
+      background-position: 25% 20%; // Fixed syntax error (was missing %) and moved more left
+    }
+    
+    @media (max-width: 576px) {
+      height: 250px;
+      padding: 70px 0 40px;
+      background-position: 20% 20%; // Changed from 30% to show more of the left side
+    }
+    
+    // Position content above the overlay
+    .container {
+      position: relative;
+      z-index: 2;
+    }
     
     h1 {
       margin-bottom: 0.7rem;
       color: $white;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+      
+      @media (max-width: 576px) {
+        font-size: 1.8rem;
+      }
     }
     
     p {
@@ -23,6 +69,12 @@
       font-size: 1.1rem;
       font-weight: 300;
       color: rgba($white, 0.9);
+      
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0.8rem auto 0;
+      }
     }
   }
   
@@ -99,6 +151,7 @@
     .service-header {
       text-align: center;
       margin-bottom: 3rem;
+
       
       h2 {
         position: relative;
@@ -117,6 +170,7 @@
         color: $text;
         font-size: 1.1rem;
       }
+      
     }
     
     .service-content {
@@ -133,6 +187,15 @@
         
         &.reverse {
           flex-direction: column;
+          
+          // Add this to force image to top on mobile
+          .service-image {
+            order: -1; // Negative order moves element to start
+          }
+          
+          .service-details {
+            order: 2; // Positive order moves element to end
+          }
         }
       }
       

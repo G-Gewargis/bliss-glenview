@@ -13,11 +13,18 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 992);
-    checkMobile(); // Initial check
-    window.addEventListener('resize', checkMobile);
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 992);
+    };
 
-    return () => window.removeEventListener('resize', checkMobile);
+    // Initial check
+    checkIfMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
   // Handle scrolling
@@ -56,6 +63,26 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && !event.target.closest('.navbar-menu') && !event.target.closest('.navbar-toggle')) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [menuOpen]);
+
+  // Close menu when clicking on a link (for mobile)
+  const closeMenuOnClick = () => {
+    if (isMobile) {
+      setMenuOpen(false);
+      setServicesDropdownOpen(false);
+    }
+  };
   
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -73,68 +100,115 @@ const Navbar = () => {
         </button>
         
         <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
-          <li>
-            <Link 
-              to="/" 
-              className={location.pathname === '/' ? 'active' : ''}
+          {/* Main navigation items */}
+          <div className="nav-items-group">
+            <li>
+              <Link 
+                to="/" 
+                className={location.pathname === '/' ? 'active' : ''}
+                onClick={closeMenuOnClick}
+              >
+                Home
+              </Link>
+            </li>
+            <li
+              className="dropdown-container"
+              ref={servicesDropdownRef}
+              onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
+              onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
             >
-              Home
-            </Link>
-          </li>
-          <li
-            className="dropdown-container"
-            ref={servicesDropdownRef}
-            onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
-            onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
-          >
-            <div
-              className={`dropdown-toggle ${location.pathname === '/services' ? 'active' : ''}`}
-              onClick={() => isMobile && setServicesDropdownOpen(!servicesDropdownOpen)}
-            >
-              <div className="dropdown-flex">
-                <Link to="/services" className={`services-link ${location.pathname === '/services' ? 'active' : ''}`}>
-                  Services
-                </Link>
-                <FaChevronDown 
-                  className={`dropdown-icon ${servicesDropdownOpen ? 'active' : ''}`} 
-                />
+              <div
+                className={`dropdown-toggle ${location.pathname === '/services' ? 'active' : ''}`}
+                onClick={() => isMobile && setServicesDropdownOpen(!servicesDropdownOpen)}
+              >
+                <div className="dropdown-flex">
+                  <Link 
+                    to="/services" 
+                    className={`services-link ${location.pathname === '/services' ? 'active' : ''}`}
+                    onClick={closeMenuOnClick}
+                  >
+                    Services
+                  </Link>
+                  <FaChevronDown 
+                    className={`dropdown-icon ${servicesDropdownOpen ? 'active' : ''}`} 
+                  />
+                </div>
               </div>
-            </div>
 
-            <ul className={`dropdown-menu ${servicesDropdownOpen ? 'show' : ''}`}>
-              <li><Link to="/services#hair">Hair Services</Link></li>
-              <li><Link to="/services#color">Color Services</Link></li>
-              <li><Link to="/services#nails">Nail Services</Link></li>
-              <li><Link to="/services#waxing">Waxing Services</Link></li>
-            </ul>
-          </li>
+              <ul className={`dropdown-menu ${servicesDropdownOpen ? 'show' : ''}`}>
+                <li><Link to="/services#hair" onClick={closeMenuOnClick}>Hair Services</Link></li>
+                <li><Link to="/services#color" onClick={closeMenuOnClick}>Color Services</Link></li>
+                <li><Link to="/services#nails" onClick={closeMenuOnClick}>Nail Services</Link></li>
+                <li><Link to="/services#waxing" onClick={closeMenuOnClick}>Waxing Services</Link></li>
+                <li><Link to="/services#facials" onClick={closeMenuOnClick}>Facial Services</Link></li>
+                <li><Link to="/services#eyelashes" onClick={closeMenuOnClick}>Eyelash Services</Link></li>
+                <li><Link to="/services#makeup" onClick={closeMenuOnClick}>Makeup Services</Link></li>
+                <li><Link to="/services#packages" onClick={closeMenuOnClick}>Packages</Link></li>
+              </ul>
+            </li>
 
-          <li>
-            <Link 
-              to="/about" 
-              className={location.pathname === '/about' ? 'active' : ''}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/contact" 
-              className={location.pathname === '/contact' ? 'active' : ''}
-            >
-              Contact
-            </Link>
-          </li>
-          <li className="btn-container">
-            <a 
-              href="https://blissglenview.com/booking" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn btn-filled"
-            >
-              Book Now
-            </a>
-          </li>
+            <li>
+              <Link 
+                to="/about" 
+                className={location.pathname === '/about' ? 'active' : ''}
+                onClick={closeMenuOnClick}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/contact" 
+                className={location.pathname === '/contact' ? 'active' : ''}
+                onClick={closeMenuOnClick}
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/policies" 
+                className={location.pathname === '/policies' ? 'active' : ''}
+                onClick={closeMenuOnClick}
+              >
+                Policies
+              </Link>
+            </li>
+          </div>
+          
+          {/* Action buttons */}
+          <div className="action-buttons-group">
+            <li className="btn-container">
+              <a 
+                href="https://shop.blissglenview.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary"
+              >
+                Shop Products
+              </a>
+            </li>
+            <li className="btn-container">
+              <a 
+                href="https://blissglenview.com/gift-cards" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary"
+              >
+                Gift Cards
+              </a>
+            </li>
+            <li className="btn-container">
+              <a 
+                href="https://blissglenview.com/booking" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-filled"
+              >
+                Book Now
+              </a>
+            </li>
+          </div>
         </ul>
       </div>
     </nav>
