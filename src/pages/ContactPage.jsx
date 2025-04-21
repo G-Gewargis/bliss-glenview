@@ -1,10 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import SEO from '../components/SEO';
 import './ContactPage.scss';
+import contactHeaderImage from '../assets/images/contact-header.jpg'; // Import the image
 
 const ContactPage = () => {
+  const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,22 +55,31 @@ const ContactPage = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // In a real implementation, you would send the form data to a server
-    // Here we're just simulating a successful submission
-    setFormStatus({
-      submitted: true,
-      error: false,
-      message: 'Thank you for your message! We will get back to you shortly.'
-    });
-    
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      service: ''
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then((result) => {
+      setFormStatus({
+        submitted: true,
+        error: false,
+        message: 'Thank you for your message! We will get back to you shortly.'
+      });
+      setFormData({name: '', email: '', phone: '', message: '', service: ''});
+    })
+    .catch((error) => {
+      setFormStatus({
+        submitted: true,
+        error: true,
+        message: 'Something went wrong. Please try again or contact us directly.'
+      });
+    })
+    .finally(() => {
+      setIsSubmitting(false);
     });
   };
 
@@ -81,7 +94,11 @@ const ContactPage = () => {
       />
       
       {/* Page Header */}
-      <header className="page-header">
+      <header className="page-header" style={{ 
+          backgroundImage: `url(${contactHeaderImage})`, // Use the imported image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 30%'
+        }}>
         <div className="container">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -170,7 +187,7 @@ const ContactPage = () => {
                     <p>{formStatus.message}</p>
                   </div>
                 ) : (
-                  <form className="contact-form" onSubmit={handleSubmit}>
+                  <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                       <label htmlFor="name">Your Name *</label>
                       <input 
@@ -240,7 +257,9 @@ const ContactPage = () => {
                       ></textarea>
                     </div>
                     
-                    <button type="submit" className="btn btn-filled">Send Message</button>
+                    <button type="submit" className="btn btn-filled" disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </button>
                   </form>
                 )}
               </div>

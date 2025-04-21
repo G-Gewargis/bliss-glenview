@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import './AboutPage.scss';
+import aboutPageHeader from '../assets/images/about-header.jpg'; // Import the image
 
 const AboutPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,7 +37,11 @@ const AboutPage = () => {
       />
 
       {/* Page Header */}
-      <header className="page-header">
+      <header className="page-header" style={{ 
+        backgroundImage: `url(${aboutPageHeader})`, // Use the imported image
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 30%'
+          }}>
         <div className="container">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
