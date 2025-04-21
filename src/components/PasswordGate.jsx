@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CORRECT_PASSWORD = "bliss2025"; // change this to whatever you want
+const CORRECT_PASSWORD = import.meta.env.VITE_SITE_PASSWORD;
 
 export default function PasswordGate({ children }) {
   const [entered, setEntered] = useState(false);
