@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="contact-info">
               <li>
                 <FaMapMarkerAlt />
-                <span>1875 Waukegan Road, Glenview, Illinois</span>
+                <span>1877 Waukegan Road, Glenview, Illinois</span>
               </li>
               <li>
                 <FaPhone />

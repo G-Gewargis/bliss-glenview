@@ -62,7 +62,7 @@ const ContactPage = () => {
     <div className="contact-page">
       <SEO 
         title="Contact Us"
-        description="Get in touch with Bliss Salon of Glenview. Located at 1875 Waukegan Road, Glenview, IL. Book appointments, ask questions, or provide feedback via phone (773) 550-3730 or email."
+        description="Get in touch with Bliss Salon of Glenview. Located at 1877 Waukegan Road, Glenview, IL. Book appointments, ask questions, or provide feedback via phone (773) 550-3730 or email."
         keywords="contact salon, Glenview salon, book appointment, salon location, hair salon contact, beauty salon contact"
         image="/images/og-image.jpg"
         canonical="https://blissglenview.com/contact"
@@ -90,15 +90,15 @@ const ContactPage = () => {
               <h2>Contact Information</h2>
               <p>We look forward to hearing from you! Reach out through any of the methods below or fill out our contact form.</p>
               <ul className="info-list">
-                <li><div className="icon"><FaMapMarkerAlt /></div><div className="detail"><h3>Location</h3><p>1875 Waukegan Road<br />Glenview, IL 60025</p></div></li>
+                <li><div className="icon"><FaMapMarkerAlt /></div><div className="detail"><h3>Location</h3><p>1877 Waukegan Road<br />Glenview, IL 60025</p></div></li>
                 <li><div className="icon"><FaPhone /></div><div className="detail"><h3>Phone</h3><p>(773) 550-3730</p></div></li>
                 <li><div className="icon"><FaEnvelope /></div><div className="detail"><h3>Email</h3><p>info@blissglenview.com</p></div></li>
-                <li><div className="icon"><FaClock /></div><div className="detail"><h3>Hours</h3><p>Mon–Fri: 9am–8pm<br />Sat: 9am–6pm<br />Sun: 10am–5pm</p></div></li>
+                <li><div className="icon"><FaClock /></div><div className="detail"><h3>Hours</h3><p>Sun–Mon: Closed<br />Tuesday: 10am-4pm<br />Wed-Sat: 10am-6pm</p></div></li>
               </ul>
               <div className="booking-info">
                 <h3>Book an Appointment</h3>
                 <p>For the fastest service, book your appointment online:</p>
-                <a href="https://blissglenview.com/booking" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
+                <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
               </div>
             </div>
 
@@ -162,7 +162,7 @@ const ContactPage = () => {
         <div className="map-container">
           <iframe
             title="Bliss Salon Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5921.72101682707!2d-87.79958642381492!3d42.08903815218076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc65d7440ea1d%3A0xae4a0a88f9ed2014!2s1875%20Waukegan%20Rd%2C%20Glenview%2C%20IL%2060025!5e0!3m2!1sen!2sus!4v1745122658694!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5921.713520722891!2d-87.79948442381493!3d42.08911845217579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc65d767bfe81%3A0x304442744c5d513e!2s1877%20Waukegan%20Rd%2C%20Glenview%2C%20IL%2060025!5e0!3m2!1sen!2sus!4v1745966663422!5m2!1sen!2sus"
             width="100%"
             height="450"
             style={{ border: 0 }}

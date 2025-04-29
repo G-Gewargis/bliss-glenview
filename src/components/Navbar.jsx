@@ -165,6 +165,9 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            {/* commenting out the policies page for now */}
+            
+            {/*
             <li>
               <Link 
                 to="/policies" 
@@ -174,10 +177,16 @@ const Navbar = () => {
                 Policies
               </Link>
             </li>
+            */}
+
           </div>
           
           {/* Action buttons */}
+
+          {/* commenting out the gift cards button for now */}
+          
           <div className="action-buttons-group">
+            {/*
             <li className="btn-container">
               <a 
                 href="https://shop.blissglenview.com" 
@@ -188,6 +197,11 @@ const Navbar = () => {
                 Shop Products
               </a>
             </li>
+            */}
+            
+            {/* commenting out the gift cards button for now */}
+
+            {/*
             <li className="btn-container">
               <a 
                 href="https://blissglenview.com/gift-cards" 
@@ -198,9 +212,11 @@ const Navbar = () => {
                 Gift Cards
               </a>
             </li>
+            */}
+
             <li className="btn-container">
               <a 
-                href="https://blissglenview.com/booking" 
+                href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-filled"

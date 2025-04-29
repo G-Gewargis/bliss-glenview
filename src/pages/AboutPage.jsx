@@ -91,6 +91,10 @@ const AboutPage = () => {
       </section>
 
       {/* Our Team Section */}
+
+      { /* commenting out the team section for now */} 
+
+      {/* }
       <section className="section our-team">
         <div className="container">
           <div className="section-title">
@@ -100,10 +104,9 @@ const AboutPage = () => {
           </div>
           
           <div className="team-grid">
-            {/* Team Member 1 */}
+            Team Member 1 
             <div className="team-member fade-in">
               <div className="member-image">
-                {/* Replace with actual team member image */}
                 <div className="placeholder-image"></div>
               </div>
               <div className="member-info">
@@ -113,10 +116,9 @@ const AboutPage = () => {
               </div>
             </div>
             
-            {/* Team Member 2 */}
+            Team Member 2
             <div className="team-member fade-in">
               <div className="member-image">
-                {/* Replace with actual team member image */}
                 <div className="placeholder-image"></div>
               </div>
               <div className="member-info">
@@ -126,10 +128,9 @@ const AboutPage = () => {
               </div>
             </div>
             
-            {/* Team Member 3 */}
+            Team Member 3
             <div className="team-member fade-in">
               <div className="member-image">
-                {/* Replace with actual team member image */}
                 <div className="placeholder-image"></div>
               </div>
               <div className="member-info">
@@ -139,10 +140,9 @@ const AboutPage = () => {
               </div>
             </div>
             
-            {/* Team Member 4 */}
+            Team Member 4
             <div className="team-member fade-in">
               <div className="member-image">
-                {/* Replace with actual team member image */}
                 <div className="placeholder-image"></div>
               </div>
               <div className="member-info">
@@ -152,10 +152,11 @@ const AboutPage = () => {
               </div>
             </div>
             
-            {/* Add more team members as needed */}
           </div>
         </div>
       </section>
+
+      */}
 
       {/* Our Values Section */}
       <section className="section our-values">
@@ -207,7 +208,7 @@ const AboutPage = () => {
             <h2>Experience the Bliss Difference</h2>
             <div className="accent-line"></div>
             <p>Visit our salon and discover why clients trust us with their beauty and wellness needs.</p>
-            <a href="https://blissglenview.com/booking" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Your Appointment</a>
+            <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Your Appointment</a>
           </div>
         </div>
       </section>

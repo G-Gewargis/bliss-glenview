@@ -123,37 +123,37 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Women's Cut & Style</div>
-                  <div className="service-price">$65+</div>
+                  {/* <div className="service-price">$65+</div> */}
                   <div className="service-description">Includes consultation, shampoo, conditioning, cut and style.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Men's Cut & Style</div>
-                  <div className="service-price">$45+</div>
+                  {/* <div className="service-price">$45+</div> */}
                   <div className="service-description">Classic or contemporary styles with attention to detail.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Children's Cut</div>
-                  <div className="service-price">$35+</div>
+                  {/* <div className="service-price">$35+</div> */}
                   <div className="service-description">For children 12 and under.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Blowout & Style</div>
-                  <div className="service-price">$50+</div>
+                  {/* <div className="service-price">$50+</div> */}
                   <div className="service-description">Professional blowdry and styling for any occasion.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Special Occasion Style</div>
-                  <div className="service-price">$85+</div>
+                  {/* <div className="service-price">$85+</div> */}
                   <div className="service-description">Elegant updo or special event styling.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Deep Conditioning Treatment</div>
-                  <div className="service-price">$30+</div>
+                  {/* <div className="service-price">$30+</div> */}
                   <div className="service-description">Intensive repair and hydration for damaged hair.</div>
                 </div>
                 
@@ -176,37 +176,37 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Single Process Color</div>
-                  <div className="service-price">$75+</div>
+                  {/* <div className="service-price">$75+</div> */}
                   <div className="service-description">Full coverage color to enhance or completely change your look.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Partial Highlights</div>
-                  <div className="service-price">$95+</div>
+                  {/* <div className="service-price">$95+</div> */}
                   <div className="service-description">Dimensional color focused around the face and crown.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Full Highlights</div>
-                  <div className="service-price">$135+</div>
+                  {/* <div className="service-price">$135+</div> */}
                   <div className="service-description">Complete dimensional color throughout the hair.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Balayage</div>
-                  <div className="service-price">$150+</div>
+                  {/* <div className="service-price">$150+</div> */}
                   <div className="service-description">Hand-painted highlights for a natural, sun-kissed look.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Ombre</div>
-                  <div className="service-price">$165+</div>
+                  {/* <div className="service-price">$165+</div> */}
                   <div className="service-description">Gradual color transition from roots to ends.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Color Correction</div>
-                  <div className="service-price">Consultation Required</div>
+                  {/* <div className="service-price">Consultation Required</div> */}
                   <div className="service-description">Professional solutions for previous color issues.</div>
                 </div>
                 
@@ -237,37 +237,37 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Classic Manicure</div>
-                  <div className="service-price">$35</div>
+                  {/* <div className="service-price">$35</div> */}
                   <div className="service-description">Nail shaping, cuticle care, hand massage, and polish.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Gel Manicure</div>
-                  <div className="service-price">$50</div>
+                  {/* <div className="service-price">$50</div> */}
                   <div className="service-description">Long-lasting gel polish application with classic manicure.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Classic Pedicure</div>
-                  <div className="service-price">$55</div>
+                  {/* <div className="service-price">$55</div> */}
                   <div className="service-description">Foot soak, exfoliation, nail care, and polish.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Deluxe Pedicure</div>
-                  <div className="service-price">$75</div>
+                  {/* <div className="service-price">$75</div> */}
                   <div className="service-description">Extended massage, paraffin treatment, and premium products.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Nail Art</div>
-                  <div className="service-price">$10+</div>
+                  {/* <div className="service-price">$10+</div> */}
                   <div className="service-description">Custom designs and embellishments per nail.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Polish Change (Hands/Feet)</div>
-                  <div className="service-price">$20/$25</div>
+                  {/* <div className="service-price">$20/$25</div> */}
                   <div className="service-description">Quick color refresh for hands or feet.</div>
                 </div>
               </div>
@@ -286,43 +286,43 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Eyebrow Waxing/Threading</div>
-                  <div className="service-price">$25</div>
+                  {/* <div className="service-price">$25</div> */}
                   <div className="service-description">Precise shaping to enhance your natural features.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Lip or Chin</div>
-                  <div className="service-price">$15</div>
+                  {/* <div className="service-price">$15</div> */}
                   <div className="service-description">Quick and gentle facial hair removal.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Full Face</div>
-                  <div className="service-price">$60</div>
+                  {/* <div className="service-price">$60</div> */}
                   <div className="service-description">Complete facial hair removal, excludes eyebrows.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Underarm</div>
-                  <div className="service-price">$30</div>
+                  {/* <div className="service-price">$30</div> */}
                   <div className="service-description">Thorough underarm hair removal.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Half Arm/Full Arm</div>
-                  <div className="service-price">$40/$60</div>
+                  {/* <div className="service-price">$40/$60</div> */}
                   <div className="service-description">Smooth, hair-free arms.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Half Leg/Full Leg</div>
-                  <div className="service-price">$55/$90</div>
+                  {/* <div className="service-price">$55/$90</div> */}
                   <div className="service-description">Silky smooth legs with long-lasting results.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Bikini</div>
-                  <div className="service-price">$50+</div>
+                  {/* <div className="service-price">$50+</div> */}
                   <div className="service-description">Various options available for bikini area hair removal.</div>
                 </div>
               </div>
@@ -349,19 +349,19 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Bliss Facial</div>
-                  <div className="service-price">$85</div>
+                  {/* <div className="service-price">$85</div> */}
                   <div className="service-description">Our signature facial customized for your skin type, includes cleansing, exfoliation, mask, and relaxing massage.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Teen Facial</div>
-                  <div className="service-price">$65</div>
+                  {/* <div className="service-price">$65</div> */}
                   <div className="service-description">Specially formulated for younger skin to address acne concerns and establish proper skincare habits.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Anti-Aging Facial</div>
-                  <div className="service-price">$110</div>
+                  {/* <div className="service-price">$110</div> */}
                   <div className="service-description">Advanced treatment with premium products to target fine lines, wrinkles, and loss of elasticity.</div>
                 </div>
               </div>
@@ -380,25 +380,25 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Eyelash Extensions</div>
-                  <div className="service-price">$150+</div>
+                  {/* <div className="service-price">$150+</div> */}
                   <div className="service-description">Full set of premium quality lash extensions individually applied for a natural yet dramatic look.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Eyelash Fill In</div>
-                  <div className="service-price">$70+</div>
+                  {/* <div className="service-price">$70+</div> */}
                   <div className="service-description">Maintenance service recommended every 2-3 weeks to fill in grown-out lashes.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Eyelash Curl</div>
-                  <div className="service-price">$65</div>
+                  {/* <div className="service-price">$65</div> */}
                   <div className="service-description">Semi-permanent curl that lifts and enhances your natural lashes for up to 8 weeks.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Eyelash Tinting</div>
-                  <div className="service-price">$35</div>
+                  {/* <div className="service-price">$35</div> */}
                   <div className="service-description">Semi-permanent color enhancement for your natural lashes, perfect for those with light colored lashes.</div>
                 </div>
               </div>
@@ -425,25 +425,25 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Full Face Makeup</div>
-                  <div className="service-price">$85</div>
+                  {/* <div className="service-price">$85</div> */}
                   <div className="service-description">Complete makeup application including foundation, eyes, lips, and contouring using premium products.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Eyes Only Makeup</div>
-                  <div className="service-price">$45</div>
+                  {/* <div className="service-price">$45</div> */}
                   <div className="service-description">Focused application on eyes including eyeshadow, liner, and mascara for a dramatic look.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Bridal Makeup</div>
-                  <div className="service-price">$150+</div>
+                  {/* <div className="service-price">$150+</div> */}
                   <div className="service-description">Long-lasting, photo-ready makeup application for your special day, includes consultation and premium products.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Prom Makeup</div>
-                  <div className="service-price">$95</div>
+                  {/* <div className="service-price">$95</div> */}
                   <div className="service-description">Age-appropriate glamour for prom, homecoming, and other special events.</div>
                 </div>
               </div>
@@ -462,42 +462,42 @@ const ServicesPage = () => {
               <div className="service-details fade-in">
                 <div className="service-item">
                   <div className="service-name">Bliss Full Day of Beauty</div>
-                  <div className="service-price">$260</div>
+                  {/* <div className="service-price">$260</div> */}
                   <div className="service-description">Haircut & Style, Eyebrow & Lip Wax/Threading, Paraffin Treatment on Hands & Feet, No-Chip Manicure, Pedicure & Make-Up Application.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Bliss Half Day of Beauty</div>
-                  <div className="service-price">$164</div>
+                  {/* <div className="service-price">$164</div> */}
                   <div className="service-description">Haircut & Style, No-Chip Manicure & Pedicure, Paraffin Treatment on Hands & Feet.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Nails & Toes</div>
-                  <div className="service-price">$100</div>
+                  {/* <div className="service-price">$100</div> */}
                   <div className="service-description">No-Chip Manicure, Pedicure, Paraffin Treatment on Hands & Feet.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Beautiful Face</div>
-                  <div className="service-price">$110</div>
+                  {/* <div className="service-price">$110</div> */}
                   <div className="service-description">One Hour Bliss Facial, Eyebrow & Lip Waxing or Threading.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">Makeup & More</div>
-                  <div className="service-price">$232</div>
+                  {/* <div className="service-price">$232</div> */}
                   <div className="service-description">Full Face Makeup Application & Eyelash Extensions.</div>
                 </div>
                 
                 <div className="service-item">
                   <div className="service-name">King's Day</div>
-                  <div className="service-price">$97</div>
+                  {/* <div className="service-price">$97</div> */}
                   <div className="service-description">Men's Haircut & Style, "Man"-icure, Pedicure.</div>
                 </div>
                 
                 <div className="service-note">
-                  <p>* All services are discounted 5% off in the packages. No substitutions and packages may not be shared.</p>
+                 {/* <p>* All services are discounted 5% off in the packages. No substitutions and packages may not be shared.</p> */}
                 </div>
               </div>
               
@@ -515,7 +515,7 @@ const ServicesPage = () => {
               <h2>Ready to Book Your Service?</h2>
               <div className="accent-line"></div>
               <p>Schedule an appointment with our expert team for the ultimate beauty experience.</p>
-              <a href="https://blissglenview.com/booking" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
+              <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
             </div>
           </div>
         </section>
