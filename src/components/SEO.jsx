@@ -14,7 +14,7 @@ const SEO = ({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   
   // Use current URL if none provided
-  const currentUrl = url || typeof window !== 'undefined' ? window.location.href : 'https://blissglenview.com';
+  const currentUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://blissglenview.com');
   const canonicalUrl = canonical || currentUrl;
 
   return (
