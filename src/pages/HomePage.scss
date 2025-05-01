@@ -11,6 +11,11 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 768px) { 
+      height: 80vh;
+      min-height: 80vh; // Ensure it doesn't shrink too much
+    }
+
     &-carousel-container {
       position: absolute;
       top: 0;
@@ -18,6 +23,7 @@
       width: 100%;
       height: 100%;
       z-index: 0;
+
 
       .hero-swiper {
         width: 100%;
@@ -68,6 +74,17 @@
       color: white;
       pointer-events: auto;
       margin-bottom: 60px;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        margin-bottom: 20px; // Adjust margin for smaller screens
+        max-width: 90%; // Allow more width on smaller screens
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px; // Add some top margin for smaller screens
+      }
+
+
 
       // Add a semi-transparent background just for the text container
       background-color: rgba(0, 0, 0, 0.4); // Black overlay just for text
@@ -144,7 +161,17 @@
         font-size: 1rem;
         line-height: 1.8;
         color: $text;
+        @media (max-width: 992px) {
+          text-align: center;
+        }
       }
+      .btn-container {
+        margin-top: 2rem;
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+        
+      
 
       .btn {
         margin-top: 1rem;
@@ -163,34 +190,62 @@
           color: $white;
         }
       }
+      }
     }
 
     &-image {
       flex: 1;
-
-      .image-container {
-        position: relative;
-        padding-bottom: 75%;
-        overflow: hidden;
+      .welcome-img {
+        width: 65%;
+        height: auto;
         border-radius: 4px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
-        .placeholder-image {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url('../assets/images/salon-interior.jpg');
-          background-size: cover;
-          background-position: center;
-          transition: transform 0.5s ease;
-
-          &:hover {
-            transform: scale(1.05);
-          }
+        transition: transform 0.5s ease;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        align-items: right;
+        @media (max-width: 992px) {
+          width: 80%;
+        }
+        &:hover {
+          transform: scale(1.05);
         }
       }
+      // .image-container {
+      //   position: relative;
+      //   padding-bottom: 75%;
+      //   overflow: hidden;
+      //   border-radius: 4px;
+      //   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      //   /*.placeholder-image {
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     width: 100%;
+      //     height: 100%;
+      //     background-size: cover;
+      //     background-position: center;
+      //     transition: transform 0.5s ease;
+
+      //     @media (max-width: 992px) {
+      //    // Fix potential issues on mobile
+      //       display: block !important; // Force display
+      //       position: absolute;
+      //       height: 100%;
+      //       width: 100%;
+      //       background-position: center 25%; // Adjust focal point for mobile
+      //     }
+          
+      //     @media (max-width: 576px) {
+      //       background-position: center top; // Further adjust for smaller screens
+      //     }
+      //     &:hover {
+      //       transform: scale(1.05);
+      //     }
+      //   }*/
+      // }
     }
   }
 

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-column">
             <img src={logoImage} alt="Bliss Salon of Glenview" className="footer-logo" />
-            <p>A luxury salon providing exceptional services in hair styling, color, nails, and more for over 40 years.</p>
+            <p className="footer-description">A luxury salon providing exceptional services in hair styling, color, nails, and more for over 40 years.</p>
             <div className="social-links">
               <a href="https://www.facebook.com/BlissWinnetka/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
               <a href="https://www.instagram.com/blisssalonofwinnetka/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>

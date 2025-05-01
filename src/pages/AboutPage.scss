@@ -117,8 +117,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../assets/images/salon-story.jpg');
-            background-size: cover;
+            background-image: url('../assets/images/glenview.png');
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
             transition: transform 0.5s ease;
             

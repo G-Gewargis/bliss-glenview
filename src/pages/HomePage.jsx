@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCut, FaPaintBrush, FaHandSparkles, FaSprayCan, FaSpa, FaGem, FaPalette } from 'react-icons/fa';
+import placeholderImage from '../assets/images/glenview.png';
 import HeroCarousel from '../components/HeroCarousel';
 import SEO from '../components/SEO';
 import './HomePage.scss';
@@ -90,12 +91,17 @@ const HomePage = () => {
               <div className="welcome-text fade-in">
                 <p>At Bliss Salon of Glenview, we believe that every client deserves a personalized beauty experience that leaves them feeling refreshed, confident, and beautiful.</p>
                 <p>Our skilled team of professionals is dedicated to providing exceptional services in a relaxing, upscale environment where your satisfaction is our highest priority.</p>
+                <div className="btn-container"> 
                 <Link to="/about" className="btn-outline">About Us</Link>
+                </div>
               </div>
-              <div className="welcome-image fade-in">
+              <div className="welcome-image">
                 <div className="image-container">
-                  {/* Image placeholder - replace with actual salon interior image */}
-                  <div className="placeholder-image"></div>
+                  <img 
+                    srcSet={`${placeholderImage} 1x, ${placeholderImage} 2x`}
+                    alt="Salon welcome" 
+                    className="welcome-img"
+                  />
                 </div>
               </div>
             </div>
