@@ -208,7 +208,7 @@ const AboutPage = () => {
             <h2>Experience the Bliss Difference</h2>
             <div className="accent-line"></div>
             <p>Visit our salon and discover why clients trust us with their beauty and wellness needs.</p>
-            <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Your Appointment</a>
+            <a href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Your Appointment</a>
           </div>
         </div>
       </section>

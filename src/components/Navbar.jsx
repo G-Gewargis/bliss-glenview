@@ -216,7 +216,7 @@ const Navbar = () => {
 
             <li className="btn-container">
               <a 
-                href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" 
+                href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-filled"

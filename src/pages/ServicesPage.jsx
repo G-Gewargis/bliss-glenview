@@ -515,7 +515,7 @@ const ServicesPage = () => {
               <h2>Ready to Book Your Service?</h2>
               <div className="accent-line"></div>
               <p>Schedule an appointment with our expert team for the ultimate beauty experience.</p>
-              <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
+              <a href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
             </div>
           </div>
         </section>

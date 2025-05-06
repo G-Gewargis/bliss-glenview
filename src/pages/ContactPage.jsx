@@ -98,7 +98,7 @@ const ContactPage = () => {
               <div className="booking-info">
                 <h3>Book an Appointment</h3>
                 <p>For the fastest service, book your appointment online:</p>
-                <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
+                <a href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
               </div>
             </div>
 

@@ -74,7 +74,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Link to="/services" className="btn btn-filled">Explore Services</Link>
-              <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Book Appointment</a>
+              <a href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Book Appointment</a>
             </motion.div>
           </div>
         </section>
@@ -191,7 +191,7 @@ const HomePage = () => {
             <div className="cta-content fade-in">
               <h2>Ready to Experience Bliss?</h2>
               <p>Book your appointment today and treat yourself to the luxury you deserve.</p>
-              <a href="https://app.rosysalonsoftware.com/customer/login.htm?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
+              <a href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" target="_blank" rel="noopener noreferrer" className="btn btn-filled">Book Now</a>
             </div>
           </div>
         </section>

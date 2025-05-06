@@ -39,7 +39,7 @@ const Footer = () => {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><a href="https://blissglenview.com/booking" target="_blank" rel="noopener noreferrer">Book Online</a></li>
+              <li><a href="https://online.rosysalonsoftware.com/onlineBooking?id=52733" target="_blank" rel="noopener noreferrer">Book Online</a></li>
             </ul>
           </div>
           
