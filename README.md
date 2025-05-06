@@ -25,7 +25,7 @@ This project leverages the following languages and technologies:
 - **Custom Styling** – SCSS makes the styling process efficient and consistent across the website.
 
 ## Live Demo
-[https://bliss-glenview.vercel.app/](https://bliss-glenview.vercel.app/)
+[https://www.blissglenview.com/](https://www.blissglenview.com/)
 
 ## 📂 Project Structure
 
