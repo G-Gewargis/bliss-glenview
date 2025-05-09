@@ -1,8 +1,10 @@
+@import '../styles/main.scss';
+
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #d4af37;
+    background-color: $accent;
     color: white;
     border: none;
     border-radius: 50%;

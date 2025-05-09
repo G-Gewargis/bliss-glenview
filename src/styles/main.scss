@@ -7,7 +7,7 @@ $black: #111111;
 $heading: #212121; // Near black for headers
 $text: #333333; // Dark charcoal for text
 $light-bg: #f9f9f9; // Light background for sections
-$accent: #c9a84a; // Updated gold accent - slightly deeper for better contrast
+$accent: #e9b0b0; // New Pink 
 $accent-light: rgba($accent, 0.1);
 $accent-hover: darken($accent, 10%);
 
@@ -15,7 +15,7 @@ $accent-hover: darken($accent, 10%);
 $accent2: #e6b8b0; // Rich blush pink
 
 // New pastel color for softer accents
-$pastel: #b9a1c9; // Richer dusty lavender
+$pastel: #e9b0b0;
 $pastel-light: rgba($pastel, 0.15);
 $pastel-hover: darken($pastel, 10%);
 
