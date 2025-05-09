@@ -4,15 +4,66 @@
 $secondary: #64a19c; // A teal color to contrast with your accent color
 $secondary-hover: darken($secondary, 10%);
 
+// Call and book container styling
+.call-book-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+// Call content styles
+.call-container {
+  margin-bottom: 5px;
+  position: absolute;
+  top: -30px; // Keep this positioning
+  margin-right: 30px;
+  
+  .call-content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    
+    .call-icon {
+      margin-right: 8px;
+      color: $accent;
+    }
+    
+    a {
+      color: $text;
+      font-weight: 500;
+      font-size: .95rem;
+      text-decoration: none;
+
+      
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+
+// Add a specific media query for 1450px
+@media (max-width: 1510px) {
+.call-container {
+  margin-right: 150px;; 
+  }
+}
+
+
+
+
+
+// Adjust navbar position to account for call banner
 .navbar {
   position: fixed;
-  top: 0;
+  top: 0px; // Height of the call banner
   left: 0;
   width: 100%;
   z-index: 1000;
   background-color: $white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-  padding: 15px 0;
+  padding: 30px 0; // Increased from 15px to 20px
   transition: all 0.3s ease;
 
   .navbar-logo span, 
@@ -23,10 +74,15 @@ $secondary-hover: darken($secondary, 10%);
   }
   
   &.scrolled {
-    padding: 8px 0; // Reduced padding when scrolled
+    // Keep scrolled position relative to call banner (don't change top value)
+    padding: 15px 0; // Increased from 8px to 12px
     
     .navbar-logo .logo-image {
-      height: 45px; // Smaller logo when scrolled
+      height: 65px; // Increased from 45px to 55px
+    }
+
+    .call-content {
+      margin-top: 7px;
     }
   }
   
@@ -74,7 +130,7 @@ $secondary-hover: darken($secondary, 10%);
     }
 
     .logo-image {
-      height: 80px; 
+      height: 90px; // Increased from 80px to 90px
       width: auto;
       transition: height 0.3s ease;
     }
@@ -352,6 +408,53 @@ $secondary-hover: darken($secondary, 10%);
         margin-top: auto !important; // Push to bottom
         padding-top: 15px !important;
         border-top: 1px solid rgba(0,0,0,0.05);
+        
+        .call-book-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-top: 0 !important;
+          position: static;
+        }
+        
+        .call-container {
+          position: static;
+          margin-bottom: 15px;
+          width: 100%;
+          text-align: center;
+          margin-left: 0;
+          margin-right: 0;
+          padding: 0;
+          
+          .call-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            
+            .call-icon {
+              margin-right: 8px;
+            }
+            
+            a {
+              font-size: 0.9rem;
+            }
+          }
+        }
+        
+        li.btn-container {
+          margin: 0 !important;
+          width: 100%;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          
+          .btn {
+            display: inline-block;
+            text-align: center;
+          }
+        }
       }
       
       li {

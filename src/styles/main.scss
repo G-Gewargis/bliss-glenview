@@ -47,6 +47,13 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  // Add top padding to account for fixed navbar and call banner
+  padding-top: 43px; // Adjust this value based on the combined height of navbar + call banner
+  
+  @media (max-width: 992px) {
+    padding-top: 40px; // Slightly less on mobile
+  }
 }
 
 h1, h2, h3, h4, h5 {

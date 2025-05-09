@@ -91,7 +91,9 @@ const ContactPage = () => {
               <p>We look forward to hearing from you! Reach out through any of the methods below or fill out our contact form.</p>
               <ul className="info-list">
                 <li><div className="icon"><FaMapMarkerAlt /></div><div className="detail"><h3>Location</h3><p>1877 Waukegan Road<br />Glenview, IL 60025</p></div></li>
-                <li><div className="icon"><FaPhone /></div><div className="detail"><h3>Phone</h3><p>(773) 550-3730</p></div></li>
+                <li><div className="icon"><FaPhone /></div>
+                {/* <a href="tel:7735503730">(773) 550-3730</a> */}
+                <div className="detail"><h3>Phone</h3><p>(773) 550-3730</p></div></li>
                 <li><div className="icon"><FaEnvelope /></div><div className="detail"><h3>Email</h3><p>info@blissglenview.com</p></div></li>
                 <li><div className="icon"><FaClock /></div><div className="detail"><h3>Hours</h3><p>Sun–Mon: Closed<br />Tuesday: 10am-4pm<br />Wed-Sat: 10am-6pm</p></div></li>
               </ul>
@@ -162,7 +164,7 @@ const ContactPage = () => {
         <div className="map-container">
           <iframe
             title="Bliss Salon Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5921.713520722891!2d-87.79948442381493!3d42.08911845217579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc65d767bfe81%3A0x304442744c5d513e!2s1877%20Waukegan%20Rd%2C%20Glenview%2C%20IL%2060025!5e0!3m2!1sen!2sus!4v1745966663422!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.856944831839!2d-87.7969095!3d42.0891145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc779153b8f27%3A0xe240cb4e7bbee2a1!2sBliss%20Salon%20of%20Glenview!5e0!3m2!1sen!2sus!4v1746787130076!5m2!1sen!2sus"
             width="100%"
             height="450"
             style={{ border: 0 }}
