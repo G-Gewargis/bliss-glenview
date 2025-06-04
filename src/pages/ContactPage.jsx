@@ -95,7 +95,7 @@ const ContactPage = () => {
                 {/* <a href="tel:7735503730">(773) 550-3730</a> */}
                 <div className="detail"><h3>Phone</h3><p>(773) 550-3730</p></div></li>
                 <li><div className="icon"><FaEnvelope /></div><div className="detail"><h3>Email</h3><p>info@blissglenview.com</p></div></li>
-                <li><div className="icon"><FaClock /></div><div className="detail"><h3>Hours</h3><p>Sun–Mon: Closed<br />Tuesday: 10am-4pm<br />Wed-Sat: 10am-6pm</p></div></li>
+                <li><div className="icon"><FaClock /></div><div className="detail"><h3>Hours</h3><p>Sun–Mon: Closed<br />Tues-Sat: 10am-5pm </p></div></li>
               </ul>
               <div className="booking-info">
                 <h3>Book an Appointment</h3>
