@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
 import SEO from '../components/SEO';
 import './ContactPage.scss';
 import contactHeaderImage from '../assets/images/contact-header.jpg';
@@ -30,32 +29,49 @@ const ContactPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then(() => {
-      setFormStatus({
-        submitted: true,
-        error: false,
-        message: 'Thank you for your message! We will get back to you shortly.'
+    try {
+      const formData = new FormData(form.current);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        service: formData.get('service'),
+        message: formData.get('message')
+      };
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
       });
-      form.current.reset(); // clear form
-    })
-    .catch(() => {
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormStatus({
+          submitted: true,
+          error: false,
+          message: result.message
+        });
+        form.current.reset();
+      } else {
+        throw new Error(result.message);
+      }
+    } catch (error) {
       setFormStatus({
         submitted: true,
         error: true,
         message: 'Something went wrong. Please try again or contact us directly.'
       });
-    })
-    .finally(() => setIsSubmitting(false));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
